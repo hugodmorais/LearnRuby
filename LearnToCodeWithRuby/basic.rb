@@ -23,6 +23,16 @@
 -35.67.abs # distance to 0 is 35.67
 35.67.abs # distance to 0 is 35.67
 
+# downto()
+10.downto(5) { |i| puts "Countdown: #{i}" }
+# Countdown: 10
+# Countdown: 9
+# Countdown: 8
+# Countdown: 7
+# Countdown: 6
+# Countdown: 5
+
+
 
 
 
