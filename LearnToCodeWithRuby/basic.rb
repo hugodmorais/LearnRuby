@@ -32,7 +32,26 @@
 # Countdown: 6
 # Countdown: 5
 
+# upto()
+5.upto(10) { |i| puts "Upto: #{i}" }
+# Upto: 5
+# Upto: 6
+# Upto: 7
+# Upto: 8
+# Upto: 9
+# Upto: 10
 
+# step()
+1.step(100, 10) { |number| puts number } 
 
+# 11
+# 21
+# 31
+# 41
+# 51
+# 61
+# 71
+# 81
+# 91
 
 
