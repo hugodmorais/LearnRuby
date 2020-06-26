@@ -54,4 +54,15 @@
 # 81
 # 91
 
+word = "hello"
+p word.capitalize # "Hello"
+p word # hello
+
+word = "hello"
+p word.capitalize! # "Hello" view difference
+p word # Hello 
+
+
+
+
 
