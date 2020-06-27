@@ -62,6 +62,19 @@ word = "hello"
 p word.capitalize! # "Hello" view difference
 p word # Hello 
 
+# Include
+name = "Snow White"
+name.include?("h") # true
+name.include?("z") # false
+name.downcase.include("s") # true
+
+# Empty? nil? length
+"content".empty? # false
+"".length # 0
+"".empty? # true
+"".nil? # true
+
+
 
 
 
