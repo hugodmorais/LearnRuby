@@ -74,6 +74,13 @@ name.downcase.include("s") # true
 "".empty? # true
 "".nil? # true
 
+# .respond_to?
+num = 1000
+
+num.respond_to?("next") # true
+num.respond_to?(:next) # true
+num.respond_to?("length") # false
+
 
 
 
