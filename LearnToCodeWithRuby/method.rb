@@ -81,4 +81,9 @@ class Method
       puts "Incorrect combination, try again!"
     end
   end
+
+  until i > 9
+    puts i 
+    i += 1
+  end
 end
