@@ -12,4 +12,40 @@ class Method01
     end
   end
 
+  # *************************************************
+
+  number = 5000
+
+  if number > 2500
+    puts "Huge number!"
+  end
+
+  # equals
+
+  puts "Huge number!" if number > 2500
+
+
+  # ************************************************
+
+  y = nil 
+  p y # nil
+  y = 5
+  p y # 5
+  # --------------------------
+  y = nil
+  y ||= 5 
+  p y # 5
+
+  y = 10
+  y ||= 5
+  p y # 10
+
+  greeting = "Hello"
+  extraction = 0
+  letter = greeting[extraction]
+  p letter # H
+  letter ||= "Not Found" # Only set if letter is nil
+  p letter # H
+
+
 end
