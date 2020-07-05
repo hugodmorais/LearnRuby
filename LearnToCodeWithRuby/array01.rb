@@ -20,6 +20,15 @@ p fruits[100] # nil !important
 p fruits[-1] # "Banana"
 p fruits[-2] # "Grape"
 
+names = ["Tom", "Cameron", "Bob"]
+# fetch
+p names.fetch(2) # "Bob"
+p names.fetch(100) # Error ! Important
+
+p names.fetch(100, "Unkwow") # If not exist, return second param
+
+
+
 
 
 
