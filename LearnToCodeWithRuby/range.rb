@@ -29,3 +29,6 @@ puts half_alphabet.include?("j") # true
 p half_alphabet === "e" # true
 p half_alphabet === "z" # false
 
+puts rand.round(4) # 0.2936
+puts rand(100) # return number between 0 and 100
+
