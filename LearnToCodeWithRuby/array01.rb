@@ -32,6 +32,12 @@ p channels.values_at(4) # ["UPN"]
 p channels.values_at(1) # ["FOX"]
 p channels.values_at(0, 2, 4) # ["CBS", "NBC", "UPN"]
 
+numbers = [0, 1, 2, 3, 4, 5, 6]
+p numbers.slice(3) # 3
+p numbers.slice(2, 3) # [2, 3, 4]
+p numbers.slice(4..6) # [4, 5, 6]
+
+
 
 
 
