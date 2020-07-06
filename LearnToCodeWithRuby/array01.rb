@@ -27,6 +27,11 @@ p names.fetch(100) # Error ! Important
 
 p names.fetch(100, "Unkwow") # If not exist, return second param
 
+channels = ["CBS", "FOX", "NBC", "ESPN", "UPN"]
+p channels.values_at(4) # ["UPN"]
+p channels.values_at(1) # ["FOX"]
+p channels.values_at(0, 2, 4) # ["CBS", "NBC", "UPN"]
+
 
 
 
