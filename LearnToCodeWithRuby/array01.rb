@@ -63,6 +63,21 @@ end
 
 p custom_last(arr)
 
+locations = ["House", "Airport", "Bar"]
+locations.push("Restaurant") # locations = ["House", "Airport", "Bar", "Restaurant"]
+
+local = ["01", "02", "03"]
+local << "04" << "05" # ["01", "02", "03", "04", "05"]
+
+arr = [1,2,3,4,5,6,7,8,9,10]
+arr.pop # arr = [1,2,3,4,5,6,7,8,9]
+
+a <=> b :=
+  if a < b then return -1
+  if a = b then return  0
+  if a > b then return  1
+  if a and b are not comparable then return nil
+
 
 
 
