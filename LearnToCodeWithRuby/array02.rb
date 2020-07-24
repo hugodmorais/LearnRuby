@@ -41,3 +41,24 @@ end
 # Cheetah
 
 prizes = ["Pyrite", "Pyrite", "Pyrite", "Pyrite", "Gold", "Pyrite", "Pyrite"]
+
+i = 0
+while i < prizes.lenght
+  current = prizes[i]
+  if current == "Gold"
+    puts "Yay! Found gold!"
+    break
+  else
+    puts "#{current} is not gold!"
+  end
+  i += 1
+end
+# Pyrite is not gold!
+# Pyrite is not gold!
+# Pyrite is not gold!
+# Pyrite is not gold!
+# Yay! Found gold!
+
+
+
+
