@@ -1,4 +1,15 @@
 class Array02
+  def self.next
+    numbers = [1, 2, 3, "Hello", 4, nil, 5, []]
+
+    numbers.each do |num|
+      unless num.is_a?(Fixnum)
+        next
+      else
+        puts "The square of #{num} is #{num ** 2}"
+      end
+    end
+  end
   # [1,2,3,4,5]
 
   [1, 2, 3, 4, 5].each_with_index do |number, index|
@@ -63,16 +74,80 @@ class Array02
     puts "teste"
   end
 
-  def next
-    numbers = [1, 2, 3, "Hello", 4, nil, 5, []]
+  # reverse
+  p [1,2,3].reverse # [3,2,1]
 
-    numbers.each do |num|
-      unless num.is_a?(Fixnum)
-        next
-      else
-        puts "The square of #{num} is #{num ** 2}"
-      end
-    end
+  #sort
+  def self.sort
+    numbers = [5,13,1,-2,8]
+    words = ["caterpillar", "Kangaroo", "apple", "zebra"]
+
+    p numbers.sort # [-2, 1, 5, 8, 13]
+    p words.sort # ["Kangaroo", "apple", "caterpillar", "zebra"]
+    # Maiusculas são ordenadas antes das minusculas
   end
+
+  # concat
+  p [1,2,3] + [4,5] # [1,2,3,4,5]
+  p [1,2,3].concat([4,5]) # [1,2,3,4,5]
+
+  a = [1,2,3]
+  b = [4,5,6]
+
+  def custom_concat(arr1, arr2)
+    arr2.each { |elem| arr1 << elem }
+    arr1
+  end    
+
+  # max and min
+  stock_prices = [5,9,8,6,55,88,77,44,1,2,888]
+  p stock_prices.max # 888
+  p stock_prices.min # 1
+
+  fruits = ["apple", "banana", "watermelon"]
+  p fruits.max # watermelon
+  p fruits.min # apple
+
+  # include?
+  p "Hello".include?("l") # true
+
+  # index and find_index
+  colors = ["Red", "Blue", "Green", "Red"]
+
+  p colors.index("Green") # 2
+  p colors.index("Blue") # 1
+
+  p colors.find_index("Green") # 2
+  p colors.find_index("Blue") # 1
+
+  p colors.index("Orange") # nil
+  p colors.find_index("Orange") # nil
+
+  # select
+  stock_prices = [5,9,8,6,55,88,77,44,1,2,888]
+
+  matches = stock_prices.select do |number|
+    number >= 75
+  end
+
+  p matches # [88, 77, 888]
+
+  # reject
+  stock_prices = [5,9,8,6,55,88,77,44,1,2,888]
+
+  matches = stock_prices.reject do |number|
+    number >= 75
+  end
+
+  p matches # [5,9,8,6,55,44,1,2]
+
+  # partition
+  foods = ["Steak" "Vegetables", "Steak Burgues", "Kale", "Tofu"]
+
+  foods.partition { |food| food.include?("Steak") } # [["Steak", "Steak Burguer"], ["Vegetables", "Tofu", "Kale"]]
+
+  good, bad = foods.partition { |food| food.include?("Steak") }
+  p good # ["Steak", "Steak Burguer"]
+  p bad # ["Vegetables", "Tofu", "Kale"]
 end
 
