@@ -150,4 +150,3 @@ class Array02
   p good # ["Steak", "Steak Burguer"]
   p bad # ["Vegetables", "Tofu", "Kale"]
 end
-
