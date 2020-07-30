@@ -41,3 +41,19 @@ p spice_girls.to_a.flatten #  [:scary, "Melanie Brown",
                    #   :baby, "Emma Bunton",
                    #   :ginger, "Geri Halli",
                    #   :posh, "Victoria Beckam"]
+
+
+superheroes = {spiderman: "Peter Parker",
+               superman: "Clark Kent",
+               batman: "Bruce Wayne"}
+
+p superheroes # {:spiderman => "Peter Parker",
+              #  :superman => "Clark Kent",
+              #  :batman => "Bruce Wayne"}
+
+removed = superheroes.delete(:spiderman)
+
+p superheroes # {:superman => "Clark Kent",
+              #  :batman => "Bruce Wayne"}
+
+p removed # "Peter Parker"
