@@ -57,3 +57,11 @@ p superheroes # {:superman => "Clark Kent",
               #  :batman => "Bruce Wayne"}
 
 p removed # "Peter Parker"
+
+market = {garlic: "3 cloves", tomatoes: "5batches", milk: "10 gallons"}
+kitchen = {bread: "2 loaves", yogurt: "20 cans", milk: "100 gallons"}
+
+p market.merge(kitchen) # {:garlic=>"3 cloves", :tomatoes=>"5batches", :milk=>"100 gallons", :bread=>"2 loaves", :yogurt=>"20 cans"}
+
+p kitchen.merge(market) # {:bread=>"2 loaves", :yogurt=>"20 cans", :milk=>"10 gallons", :garlic=>"3 cloves", :tomatoes=>"5batches"}
+
