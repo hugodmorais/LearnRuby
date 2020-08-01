@@ -49,3 +49,35 @@ registrations = [true, false, false]
 
 p names.zip(registrations) # [["Bo", true], ["Moe", false], ["Joe", false]]
 
+
+# ----------------------------------------------- #
+ages = [10, 60, 92, 30, 43, 30]
+
+is_old = Proc.new do |age|
+  age > 60
+end
+
+p ages.select(&is_old) # [60, 92]
+
+# ----------------------------------------------- #
+def pass_control_on_condition
+  puts "Inside the method"
+  if block_given?
+    yield
+  end
+  puts "Back inside the method"
+end
+
+pass_control_on_condition # Inside the method / Back inside the method
+
+pass_control_on_condition { "block given bla bla"} # Inside the method / block given bla bla / Back inside the method
+
+# ------------------------------------------------ #
+
+def speak_the_truth
+  yield "Boris" if block_given?
+end
+
+speak_the_truth { |name| puts "#{name} is brilliant!" } # Boris is brilliant
+speak_the_truth { |name| puts "#{name} is incredible!" }
+
