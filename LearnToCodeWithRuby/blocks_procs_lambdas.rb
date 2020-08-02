@@ -28,3 +28,22 @@ to_pesos = Proc.new { |currency| currency * 20.67 }
 p currencies.map(&to_euros)
 p currencies.map(&to_rupees)
 p currencies.map(&to_pesos)
+
+# ---------------------------------------------- #
+def speak_the_truth(name)
+  yield name if block_given?
+end
+
+speak_the_truth("Boris") { |name| puts "#{name} is brilliant" } # Boris is brilliant
+
+# ---------------------------------------------- #
+
+def custom_each(array)
+  i = 0
+  while i < array.length
+    yield array[i]
+    i += 1
+  end
+end
+
+names = ["Boris", "Arnold", "Melissa"]
