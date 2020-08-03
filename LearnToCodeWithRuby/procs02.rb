@@ -74,3 +74,68 @@ p some_proc.call("Boris") # Name is Boris and age is .
 some_lambda = lambda { |name, age| "Name is #{name} and age is #{age}."}
 p some_lambda.call("Boris", 25) # Name is Boris and age is 25.
 p some_lambda.call("Boris") error error error error error error
+
+# -------------------------------------------------- #
+
+def convert_to_euros(dollars)
+  if dollars.is_a?(Numeric)
+    dollars * 0.95
+  end
+end
+
+def convert_to_pesos(dollars)
+  if dollars.is_a?(Numeric)
+    dollars * 20.67
+  end
+end
+
+def convert_to_rupees(dollars)
+  if dollars.is_a?(Numeric)
+    dollars * 68.13
+  end
+end
+
+p convert_to_euros(1000) # 950.0
+p convert_to_pesos(1000) # 20670.0
+p convert_to_rupees(1000) # 68130.0
+
+# Efficiency
+
+def convert_to_euros(dollars)
+  dollars * 0.95 if dollars.is_a?(Numeric)
+end
+
+def convert_to_pesos(dollars)
+  dollars * 20.67 if dollars.is_a?(Numeric)
+end
+
+def convert_to_rupees(dollars)
+  dollars * 68.13 if dollars.is_a?(Numeric)
+end
+
+p convert_to_euros(1000) # 950.0
+p convert_to_pesos(1000) # 20670.0
+p convert_to_rupees(1000) # 68130.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
