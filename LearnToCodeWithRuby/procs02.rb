@@ -73,7 +73,7 @@ p some_proc.call("Boris") # Name is Boris and age is .
 
 some_lambda = lambda { |name, age| "Name is #{name} and age is #{age}."}
 p some_lambda.call("Boris", 25) # Name is Boris and age is 25.
-p some_lambda.call("Boris") error error error error error error
+p some_lambda.call("Boris") # error error error error error error
 
 # -------------------------------------------------- #
 
