@@ -41,4 +41,15 @@ end
 
 find_day_of_year_by_number(150) # 2016-05-29 00:00:00 +0000
 
+# ----------------------------------------------- #
+
+# strftime
+today = Time.now
+p today
+p today.to_s # "2020-08-05 20:46:28 +0000"
+
+p today.strftime("%B %d, %Y") # "August 05, 2020"
+p today.strftime("%B %d, %y") # "August 05, 20"
+
+
 
