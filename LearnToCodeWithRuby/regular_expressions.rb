@@ -61,4 +61,23 @@ puts phrase.scan(/./) # T
 
 puts phrase.scan(/.am/) # ram  am -> give one position before "am"
 puts phrase.scan(/.ing/) # ming zing ring
+puts phrase.scan(/a.e/) # age awe
+
+# --------------------------------------------------- #
+
+paragraph = "This is my essay. I deserve an A. I rank it a 5 out of 5."
+
+puts paragraph.scan(/\./) [".", ".", "."]
+puts paragraph.scan(/d/) ["d"]
+puts paragraph.scan(/\d/) # ["5", "5"] give me digits
+puts paragraph.scan(/\s/).length # 15 give me number of with spaces
+puts paragraph.scan(/\s/).length
+
+puts word = "wordplay"
+puts word.sub("w", "sw") # swordplay
+puts word # "wordplay"
+puts word.sub!("w", "sw") # swordplay
+puts word # "swordplay"
+
+
 
