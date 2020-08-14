@@ -9,11 +9,26 @@ class Gadget
     @username
   end
 
+  def username=(new_username)
+    @username = new_username
+  end
+
   def production_number
     @production_number
+  end
+
+  def password=(new_value)
+    @password = new_value
   end
 end
 
 phone = Gadger.new
 p phone.username # "User 81"
 p phone.production_number # s-782
+
+# setter methods
+
+phone = Gadget.new
+p phone.username # "User 38"
+phone.username=("rubyman")
+p phone.username # "rubyman"
