@@ -26,5 +26,5 @@ end
 g = Gadget.new("Hugo", "password")
 p g.apps # []
 
-g,install_app(:Chat)
+g.install_app(:Chat)
 p g.apps # [#<struct AppStore::App name=:Chat, developer=:facebook, version=:2.0]
