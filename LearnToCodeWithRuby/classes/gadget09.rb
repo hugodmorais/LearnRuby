@@ -33,3 +33,16 @@ end
 puts Time.now + 45.minutes
 # Nossa classe Fixnum vai multiplicar 45 * 60 dando dessa forma os segundos
 puts Time.now + 4.hours
+
+# --------------------------------------------------------- #
+
+class Book
+  def initialize(title, author, pages)
+    @title = title
+    @author = author
+    @pages = pages
+  end
+end
+
+goosebumps = Book.new("Nightmare", "Hugo M.", 1000)
+p goosebumps 
